@@ -120,12 +120,9 @@ ul { margin: 0; padding: 0; list-style: none; }
 .nav-bar { display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 80px; }
 
 .logo { display: inline-flex; flex-direction: column; line-height: 1; }
-.logo__word {
-  font-family: var(--font-display); font-weight: 600; font-size: 20px; letter-spacing: 0.14em;
-}
-.logo__word span:first-child { color: var(--accent); }
-.logo__word span:last-child { color: var(--text-2); }
-.logo__sub { margin-top: 6px; font-size: 10px; letter-spacing: 0.3em; color: var(--faint); text-transform: uppercase; }
+.logo__img { height: 60px; width: auto; transition: opacity 0.25s var(--ease-out); }
+.logo:hover .logo__img { opacity: 0.85; }
+.site-footer .logo__img { height: 72px; }
 
 .nav-links { display: flex; gap: 32px; font-size: 15px; }
 .nav-links a { position: relative; color: var(--muted); padding: 6px 0; transition: color 0.2s; }
@@ -547,6 +544,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 
 @media (max-width: 600px) {
   :root { --gutter: 16px; }
+  .logo__img { height: 46px; }
   .hero { padding-top: 56px; }
   .hero__frame { aspect-ratio: 4 / 3.4; border-radius: 20px; }
   .float-card { left: 12px; right: 12px; bottom: 12px; }
